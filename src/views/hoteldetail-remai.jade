@@ -1,0 +1,16 @@
+// 8images/home-detail-page/article/recom-carouos01.jpg
+li
+  a.recom-good
+    .img-wrap
+      img(src='#{remai[i].img}', alt='')
+    |       
+    p.title #{remai[i].name}
+    |       
+    p.other
+      span.amount #{remai[i].bought}
+    |       
+    p.price
+      span.current-price #{remai[i].price}
+      |       
+      span.original-price
+        del #{remai[i]["old-price"]}

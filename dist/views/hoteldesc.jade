@@ -1,0 +1,151 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    | &#x9;  
+    title &#x9526;&#x6C5F;&#x4E4B;&#x661F;&#x5317;&#x4EAC;&#x5965;&#x4F53;&#x4E2D;&#x5FC3;&#x5E97;&#x7535;&#x8BDD;,&#x5730;&#x5740;,&#x4EF7;&#x683C;,&#x8425;&#x4E1A;&#x65F6;&#x95F4;
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    meta(name='keywords', content='锦江之星北京奥体中心店')
+    |     
+    meta(name='description', content='锦江之星北京奥体中心店，地址：北京安定门外安苑里1号 北京奥林匹克体育中心东门东侧 紧邻安贞门地铁站，电话：01064917666，进入锦江之星北京奥体中心店页面，查看更多关于锦江之星北京奥体中心店...')
+    //
+      http://localhost/Project/16011801-BaiduNuoMi/src/html/mct-detail-page.html
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |   
+    | &#x9;    
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/carousel.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/goodscompnent.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/poigoods.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/mct-detail-page.css')
+    //
+      <script data-baseurl="../" data-main="../js/main/hotel-detail-main.js" src="../libs/require.js" id="main"></script>
+  body.mct-detail-page
+    header.list-header
+      a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+        i.arrow-left
+      |          
+      a.home-link(href='http://yequan.ren/eshop/')
+        i.home
+      |         
+      .head-title &#x5546;&#x6237;&#x8BE6;&#x60C5;
+    |     
+    article
+      section.mct-head
+        //head
+        include hoteldesc-headinfo.jade
+        .mct-phone
+          a.icon.phone(href='javascript:void(0);') &#x7535;&#x8BDD;
+          |               
+          a.icon.envt(href='javascript:void(0);') &#x73AF;&#x5883;
+          |               
+          a.icon.panoramic(href='http://yequan.ren/eshop/streetmap?city=#{pro.city}&pointx=#{pro["point-x"]}&pointy=#{pro["point-y"]}') &#x5168;&#x666F;
+      |        
+      section.good-container.mct-good-container
+        .list-poi-goods
+          section.poi
+            a.poi-header(href='javascript:void(0);')
+              .title-line
+                | &#x4EE3;&#x91D1;&#x5238;/&#x56E2;&#x8D2D;
+            .good
+              // good
+              - var goodArray = pro.items
+              - for(var i=0;i< goodArray.length;i++){
+                  include hoteldesc-good.jade
+              - }                      
+            .poi-footer
+              span.view &#x5176;&#x4ED6;1&#x4E2A;&#x56E2;&#x8D2D;
+              |                          
+              span.put &#x6536;&#x8D77;
+      |            
+      .near-recom-wrapper
+        .hd &#x9644;&#x8FD1;&#x70ED;&#x5356;&#x63A8;&#x8350;
+        |                
+        .recom-wrapper
+          #near-recom-container.static-container
+            .swiper-free-mode.carousel-inner
+              ol
+                // recom-good
+                - for(var i=0;i<remai.length;i++){
+                    include hoteldesc-remai.jade
+                - }
+                .clear  
+      |        
+      section.mct-rs
+        .title &#x731C;&#x4F60;&#x559C;&#x6B22;
+        |           
+        .rs-word
+          ul.u-rs-word
+            li
+              a.word(href='javascript:void(0);') &#x9526;&#x6C5F;&#x4E4B;&#x661F;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x5965;&#x4F53;&#x4E2D;&#x5FC3;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x81EA;&#x52A9;&#x9910;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x86CB;&#x7CD5;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x706B;&#x9505;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x4E1C;&#x65B9;&#x997A;&#x5B50;&#x738B;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x8FA3;&#x5BB6;&#x79C1;&#x53A8;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x6DF1;&#x6D77;800&#x7C73;&#x6D77;&#x9C9C;&#x81EA;&#x52A9;
+            |                 
+            li
+              a.word(href='javascript:void(0);') &#x4E1C;&#x5317;&#x83DC;
+            |                 
+            .clear  
+    |     
+    |   
+    footer#footer.footer
+      section.info-block
+        .city-wrap
+          span.city
+            | &#x57CE;&#x5E02;&#xFF1A;
+          |                 
+          a.city-area.info-link(href='javascript:void(0);')
+            | &#x5317;&#x4EAC;
+        |              
+        .usr-wrap
+          a.nuomiquan.info-link(href='javascript:void(0);') 优惠券(0)
+          |                  
+          a.waitpaid.info-link(href='javascript:void(0);') 待付款(0)
+      |           
+      section.link-block
+        a.link(href='javascript:void(0);') &#x9996;&#x9875;
+        |               
+        a.link(href='javascript:void(0);') &#x7535;&#x8111;&#x7248;
+        |               
+        a.link(href='javascript:void(0);') &#x5BA2;&#x6237;&#x7AEF;
+        |               
+        a.link(href='javascript:void(0);') &#x4FE1;&#x606F;&#x53CD;&#x9988;
+        |               
+        a.link(href='javascript:void(0);') &#x5E2E;&#x52A9;
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号

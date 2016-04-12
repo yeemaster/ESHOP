@@ -1,0 +1,21 @@
+section.poi
+  a.poi-header(href='http://yequan.ren/eshop/hoteldesc?id=' + '#{proitems[i]["_id"]}')
+    .title-line
+      h4.title #{proitems[i].name}
+    |      
+    |         
+    p.sub-title
+      span.store #{proitems[i].store}
+      span.user #{proitems[i].score}分
+  |    
+  .good
+    // goods
+    - var subPro = proitems[i].items;
+    - for(var j=0;j<subPro.length;j++){
+        include hotel-poi-goods.jade
+    - }
+  |    
+  .poi-footer
+    span.view 其他1个团购
+    |        
+    span.put 收起

@@ -1,0 +1,294 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    | &#x9;
+    title  移动点单
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='keywords', content='移动点单')
+    meta(name='description', content='移动点单，我的生活！')
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/layout.css')   
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/carousel.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/goodscompnent.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/index.css')
+    script(data-main='javascripts/main.js',src='libs/require.js',id='main')
+  body.index-page(webtitle='index_html')
+    header.index-header
+      a.city-operate(href='javascript:void(0);')
+        span.city-name 北京
+        |          &#x9;
+        i.arrow-down
+      |          
+      a.usr-operate(href='http://yequan.ren/eshop/login')
+        i.user-image
+        |          我的
+      |          
+      .page-title 移动点单
+    |       
+    article.man-content
+      section.index-search
+        form.search-form
+          .form-inner
+            input.search-input(placeholder='搜索商家、分类、地点')
+            |       &#x9;  &#x9;&#x9;&#x9;
+            i.search-image
+          |       &#x9;  &#x9;&#x9;
+          div
+          |       &#x9;  &#x9;&#x9;
+          div
+      |       &#x9;  
+      section.index-area.index-carousel
+        #index-area-myCarousel.myCarousel
+          .carouselcto
+            ol
+              li(style="display: none;")
+              li.active
+              |       &#x9;&#x9;&#x9;&#x9;            
+              li
+              |       &#x9;&#x9;&#x9;&#x9;            
+              li
+              |       &#x9;&#x9;&#x9;&#x9;
+              li(style="display: none;")       
+            .carousel-inner
+              .item
+                img(src='images/index-page/article/carousel-2.jpg', alt='Third slide')
+              |       &#x9;&#x9;&#x9;&#x9;            
+              .item
+                img(src='images/index-page/article/carousel-0.jpg', alt='First slide')
+              |       &#x9;&#x9;&#x9;&#x9;            
+              .item
+                img(src='images/index-page/article/carousel-1.jpg', alt='Second slide')
+              |       &#x9;&#x9;&#x9;&#x9;            
+              .item
+                img(src='images/index-page/article/carousel-2.jpg', alt='Third slide')
+              |       &#x9;&#x9;&#x9;&#x9;            
+              .item
+                img(src='images/index-page/article/carousel-0.jpg', alt='First slide')
+              |                           
+              .clear  
+            |       &#x9;&#x9;&#x9;&#x9;        
+            a.carousel-control.left  
+      |           
+      section.index-catg.index-carousel
+        #index-catg-myCarousel.myCarousel
+          .carouselcto
+            .carousel-inner
+              .item
+                .subitem-container
+                  a.subitem.subitem1(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img0.png')
+                    |                                       
+                    .text 美食
+                  |                                  
+                  a.subitem.subitem2(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img1.png')
+                    |                                       
+                    .text
+                      | 电影
+                      span.ad-name &nbsp;&middot;&nbsp;选座
+                  |                                  
+                  a.subitem.subitem3(href='http://yequan.ren/eshop/hotel')
+                    img(src='images/index-page/article/index-catg-img2.png')
+                    |                                       
+                    .text 酒店
+                  |                                  
+                  a.subitem.subitem4(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img3.png')
+                    |                                       
+                    .text 休闲娱乐
+                  |                                  
+                  a.subitem.subitem5(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img4.png')
+                    |                                       
+                    .text 火锅
+                  |                                  
+                  a.subitem.subitem6(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img5.png')
+                    |                                       
+                    .text 旅游
+                  |                                  
+                  a.subitem.subitem7(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img6.png')
+                    |                                       
+                    .text 代金券
+                  |                                  
+                  a.subitem.subitem8(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img7.png')
+                    |                                       
+                    .text KTV
+              |                           
+              .item
+                .subitem-container
+                  a.subitem.subitem1(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img8.png')
+                    |                                       
+                    .text 演出赛事
+                  |                                  
+                  a.subitem.subitem2(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img9.png')
+                    |                                       
+                    .text 小吃快餐
+                  |                                  
+                  a.subitem.subitem3(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img10.png')
+                    |                                       
+                    .text 蛋糕
+                  |                                  
+                  a.subitem.subitem4(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img11.png')
+                    |                                       
+                    .text 生活服务
+                  |                                  
+                  a.subitem.subitem5(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img12.png')
+                    |                                       
+                    .text 自助餐
+                  |                                  
+                  a.subitem.subitem6(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img13.png')
+                    |                                       
+                    .text 丽人
+                  |                                  
+                  a.subitem.subitem7(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img14.png')
+                    |                                       
+                    .text 更多分类
+                  |                                  
+                  a.subitem.subitem8(href='javascript:void(0);')
+                    img(src='images/index-page/article/index-catg-img15.png')
+                    |                                       
+                    .text KTV
+              |                           
+              .clear  
+            |                       
+            ol
+              li.active
+              |                           
+              li
+              |                           
+              .clear  
+      |           
+      section.index-topten
+        .hd
+          h4.title 精选品牌
+          |                   
+          .countdown
+            .status 21点结束
+            |                         
+            i.hour 01
+            |                         
+            span.dot :
+            |                         
+            i.minute 27
+            |                         
+            span.dot :
+            |                         
+            i.second 24
+        |                
+        .content
+          img(src='images/index-page/article/index-topten01.jpg')
+        |   
+        |                
+        .clear  
+      |           
+      section.static-container
+        .swiper-free-mode.carousel-inner
+          ol
+            li
+              h5.activity-name 周二赚翻天
+              |                             
+              p.activity-desc 壕礼来相送
+              |                             
+              img.activity-img(src='images/index-page/article/swiper-free-mode01.png', alt='周二赚翻天')
+            |                          
+            li
+              h5.activity-name 电影特惠
+              |                              
+              p.activity-desc 星球大战最强来袭
+              |                              
+              img.activity-img(src='images/index-page/article/swiper-free-mode02.png', alt='电影特惠')
+            |                          
+            li
+              h5.activity-name 储值卡专区
+              |                              
+              p.activity-desc 低价来袭
+              |                              
+              img.activity-img(src='images/index-page/article/swiper-free-mode03.png', alt='储值卡专区')
+            |                          
+            li
+              h5.activity-name 秒杀专区
+              |                              
+              p.activity-desc 爆款1元抢
+              |                              
+              img.activity-img(src='images/index-page/article/swiper-free-mode04.png', alt='秒杀专区')
+            |                          
+            li
+              h5.activity-name 立减专区
+              |                              
+              p.activity-desc 最高减30
+              |                              
+              img.activity-img(src='images/index-page/article/swiper-free-mode05.png', alt='立减专区')
+            |                          
+            .clear  
+        |                
+        .active-block-layout
+          ol
+            li
+              h5.activity-name 满减专区
+              |                             
+              p.activity-desc 优惠享不停
+              |                             
+              img.activity-img(src='images/index-page/article/swiper-free-mode05.png', alt='周二赚翻天')
+            |                          
+            .clear  
+      |           
+      section.index-area
+        h3.goods-list-title
+          | 猜你喜欢
+          a.goods-list-more-link(href='javascript:void(0);') 全部团购
+      |           
+      section.goods-container
+        .normal-goods
+          - for(var j = 0;j < goods.length; j++){
+              include index-goods.jade
+          - }          
+      section.view-all
+        a.view-all-link(href='javascript:void(0);')
+          | 查看全部团购
+    |       
+    footer#footer.footer
+      section.info-block
+        .city-wrap
+          span.city
+            | 城市：
+          |                 
+          a.city-area.info-link(href='javascript:void(0);')
+            | 北京
+        |              
+        .usr-wrap
+          a.nuomiquan.info-link(href='javascript:void(0);') 优惠券(0)
+          |                  
+          a.waitpaid.info-link(href='javascript:void(0);') 待付款(0)
+      |           
+      section.link-block
+        a.link(href='javascript:void(0);') 首页
+        |               
+        a.link(href='javascript:void(0);') 电脑版
+        |               
+        a.link(href='javascript:void(0);') 客户端
+        |               
+        a.link(href='javascript:void(0);') 信息反馈
+        |               
+        a.link(href='javascript:void(0);') 帮助
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号
+    |       
+    a.goTop(href='#')

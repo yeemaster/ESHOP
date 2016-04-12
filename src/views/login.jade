@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    |     
+    title 移动点单-商家地图
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/aboutform.css')
+    script(data-main='javascripts/main.js',src='libs/require.js',id='main')    
+  body.aboutform-body(webtitle='login_html')
+    header.list-header
+      a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+        i.arrow-left
+      |        
+      a.register-btn(href='http://yequan.ren/eshop/register')
+        | 注册
+      |       
+      .lr-head-title 短信快捷登录
+    |       
+    |   
+    article
+      form.form-wrap(action='http://yequan.ren/eshop/login',method='post')
+        p#error.error_area #{errmsg}
+        |           
+        p.account-login
+          a(href='') 使用账号登录
+        |           
+        .clear  
+        |           
+        p.form-p-wrap
+          label.form-lbl(for='inputtel')
+            | 手机号
+          |           &#x9;  
+          input#inputtel.form-in(type='text', name='inputtel', placeholder='手机号')
+        |           
+        p.form-p-wrap
+          label.form-lbl(for='inputyzm')
+            | 验证码
+          |           &#x9;   
+          input#inputyzm.form-in(type='text', name='inputyzm', placeholder='验证码(8888)')
+          |           &#x9;   
+          button.pass-button-auto 发送验证码
+        |           
+        p.form-btn
+          button.sms-submit(type='submit') 登录
+      |      
+      p.yonghuxieyi
+        | 阅读并接受
+        a(href='javascript:void(0);') &lt;&lt; 用户服务协议 &gt;&gt;

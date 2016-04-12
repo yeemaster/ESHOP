@@ -1,0 +1,162 @@
+
+
+.userinfo{
+   border-bottom: 1px solid #e0e0e0;
+}
+
+.userinfo-in{
+    display: block;
+    position: relative;
+    padding: 10px 10px;
+    background: #f5f5f5;	
+}
+
+.userinfo-in .username
+{
+    font-size: 16px;
+    line-height: 28px;
+    color: #303030;	
+}
+
+.userinfo-in:after
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: url(../images/common-page/arrow_right_abed1c8.png) no-repeat center;
+    background-size: 5px auto;	
+}
+
+.bindtel{
+	padding: 0 10px;
+    font-size: 12px;
+    line-height: 31px;
+    color: #9b9b9b;	
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bindtel .edit_tel{
+    color: #296da1;
+    margin-left: 10px;	
+}
+
+.tblpro a{
+	position: relative;
+	display: block;
+	padding: 10px 40px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.tblpro a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: url(../images/common-page/arrow_right_abed1c8.png) no-repeat center;
+    background-size: 5px auto;		
+}
+
+.dyq{
+	margin-top: 20px;
+}
+
+.dyq a{
+	position: relative;
+	display: block;
+	padding: 10px 40px;
+	border-bottom: 1px solid #e0e0e0;	
+}
+
+.dyq a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: url(../images/common-page/arrow_right_abed1c8.png) no-repeat center;
+    background-size: 5px auto;		
+}
+
+.tblpro .dfk{
+	background-image: url(../images/common-page/local_ae7e8f2.png);
+	background-position: 8px;
+    background-size: 18px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .wdscq{
+	background-image: url(../images/common-page/storepay_1956f33.png);
+	    background-position: 8px;
+    background-size: 18px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .ddf{
+	background-image: url(../images/common-page/scard_ff7f351.png);
+	    background-position: 7px;
+    background-size: 20px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .kb{
+	background-image: url(../images/common-page/voucher_04d6d97.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .wdye{
+	background-image: url(../images/common-page/balance_16d5243.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .wdddp{
+	background-image: url(../images/common-page/film_0249478.png);
+	    background-position: 8px;
+    background-size: 18px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .lydd{
+	background-image: url(../images/common-page/lvyou_673e5af.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .ktvyd{
+	background-image: url(../images/common-page/ktv_653e7d0.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .jyh{
+	background-image: url(../images/common-page/juyouhui_9b7a35e.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .wdydd{
+	background-image: url(../images/common-page/logistic_595204f.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.tblpro .wdsc{
+	background-image: url(../images/common-page/icon_mycollect_3438944.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+        background-repeat: no-repeat;
+}
+.dyq .wdddq{
+	background-image: url(../images/common-page/voucher_04d6d97.png);
+	    background-position: 10px;
+    background-size: 15px auto;
+    background-repeat: no-repeat;
+}
+
+.userhome-body .dyq a,
+.userhome-body .tblpro a{
+   background-color: #fff;
+}

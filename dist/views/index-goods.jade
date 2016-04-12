@@ -1,0 +1,29 @@
+section.good
+  a.good-content(href='javascript:void(0);')
+    .img-wrapper
+      .img-placeholder
+        img(src='#{goods[j].img}')
+        |                  
+        span.tag.reservation
+    |        
+    .info-wrapper
+      .title-line
+        .title
+          h3.item-name
+            | #{goods[j].name}
+        |                
+        |                
+        span.store #{goods[j].store}
+      |             
+      p.desc #{goods[j].desc}
+      |       
+      |         
+      p.price-line
+        ins #{goods[j].price}
+        |             
+        del.old-price #{goods[j]["old-price"]}
+        |             
+        i.privilege-icon
+          span.text #{goods[j].privilege}
+        |             
+        span.bought #{goods[j].bought}

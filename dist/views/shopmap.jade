@@ -1,0 +1,116 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    |     
+    title 移动点单-商家地图
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/shopmap.css')
+    |     
+    script(type='text/javascript', src='http://api.map.baidu.com/api?v=2.0&ak=zOwSN5GtFdx9UamqPXSeFAViAcdjHMke')
+  body
+    header.list-header
+      a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+        i.arrow-left
+      |        
+      a.home-link(href='http://yequan.ren/eshop/')
+        i.home
+      |       
+      .head-title &#x5546;&#x5BB6;&#x5730;&#x56FE;
+    |   
+    article
+      section.maintop
+        .shop-name
+          | &#x9526;&#x6C5F;&#x4E4B;&#x661F;&#x5317;&#x4EAC;&#x5965;&#x4F53;&#x4E2D;&#x5FC3;&#x5E97;
+        |         
+        .shop-addr
+          | &#x5317;&#x4EAC;&#x5B89;&#x5B9A;&#x95E8;&#x5916;&#x5B89;&#x82D1;&#x91CC;1&#x53F7; &#x5317;&#x4EAC;&#x5965;&#x6797;&#x5339;&#x514B;&#x4F53;&#x80B2;&#x4E2D;&#x5FC3;&#x4E1C;&#x95E8;&#x4E1C;&#x4FA7; &#x7D27;&#x90BB;&#x5B89;&#x8D1E;&#x95E8;&#x5730;&#x94C1;&#x7AD9;
+        |         
+        .maptool
+          a.path(href='javascript:void(0);')
+            span &#x5230;&#x8FD9;&#x91CC;&#x53BB;
+          |             
+          a.contact(href='javascript:void(0);')
+            span &#x8054;&#x7CFB;&#x5546;&#x5BB6;
+          |             
+          .clear  
+      |     
+      section#shopmapcontainer.shopmapcontainer
+    |   
+    footer#footer.footer
+      section.info-block
+        .city-wrap
+          span.city
+            | &#x57CE;&#x5E02;&#xFF1A;
+          |                 
+          a.city-area.info-link(href='javascript:void(0);')
+            | &#x5317;&#x4EAC;
+        |              
+        .usr-wrap
+          a.nuomiquan.info-link(href='javascript:void(0);') 优惠券(0)
+          |                  
+          a.waitpaid.info-link(href='javascript:void(0);') 待付款(0)
+      |           
+      section.link-block
+        a.link(href='javascript:void(0);') &#x9996;&#x9875;
+        |               
+        a.link(href='javascript:void(0);') &#x7535;&#x8111;&#x7248;
+        |               
+        a.link(href='javascript:void(0);') &#x5BA2;&#x6237;&#x7AEF;
+        |               
+        a.link(href='javascript:void(0);') &#x4FE1;&#x606F;&#x53CD;&#x9988;
+        |               
+        a.link(href='javascript:void(0);') &#x5E2E;&#x52A9;
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号
+    |   
+    |   
+    script(type='text/javascript').
+      // 百度地图API功能
+
+      //解析url
+      var urlparam = window.location.search.substr(1).split('&');
+      var splitparam = {};
+      for(var j=0;j<urlparam.length;j++){
+         var tempparam = urlparam[j].split("=");
+         console.log(tempparam[0] +  " /  " + tempparam[1])
+         splitparam[tempparam[0]] = tempparam[1];
+      }
+      console.log("now city" + splitparam["city"]);
+
+      var map = new BMap.Map("shopmapcontainer");    // 创建Map实例
+      var localSearch = new BMap.LocalSearch(map);
+      localSearch.enableAutoViewport(); //允许自动调节窗体大小
+      localSearch.setSearchCompleteCallback(function (searchResult) {
+      var poi  = searchResult.getPoi(0);
+      map.centerAndZoom(new BMap.Point(poi.point.lng, poi.point.lat), 14);  // 初始化地图,设置中心点坐标和地图级别
+      // map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+      map.setCurrentCity(splitparam.city);          // 设置地图显示的城市 此项是必须设置的 
+      map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+      var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地方对应的经纬度
+      map.addOverlay(marker);
+      });
+      localSearch.search(splitparam.name);
+      var bottom_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, type: BMAP_NAVIGATION_CONTROL_ZOOM});
+      //右上角，仅包含平移和缩放按钮
+      /*缩放控件type有四种类型:
+      BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+      //添加控件和比例尺
+      map.addControl(bottom_right_navigation);

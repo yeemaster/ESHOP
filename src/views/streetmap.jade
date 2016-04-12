@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    |     
+    title 移动点单-商家地图
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/streetmap.css')
+    |     
+    script(type='text/javascript', src='http://api.map.baidu.com/api?v=2.0&ak=zOwSN5GtFdx9UamqPXSeFAViAcdjHMke')
+    |     
+    title &#x663E;&#x793A;/&#x9690;&#x85CF; &#x9053;&#x8DEF;&#x6307;&#x793A;&#x63A7;&#x4EF6;
+  body
+    header.list-header
+      a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+        i.arrow-left
+      |        
+      a.home-link(href='http://yequan.ren/eshop/')
+        i.home
+      |       
+      .head-title &#x5546;&#x5BB6;&#x5168;&#x666F;&#x5730;&#x56FE;
+    |   
+    article
+      section#streepmapcontainer.streepmapcontainer
+    |   
+    footer#footer.footer
+      section.info-block
+        .city-wrap
+          span.city
+            | &#x57CE;&#x5E02;&#xFF1A;
+          |                 
+          a.city-area.info-link(href='javascript:void(0);')
+            | &#x5317;&#x4EAC;
+        |              
+        .usr-wrap
+          a.nuomiquan.info-link(href='javascript:void(0);') 优惠券(0)
+          |                  
+          a.waitpaid.info-link(href='javascript:void(0);') 待付款(0)
+      |           
+      section.link-block
+        a.link(href='javascript:void(0);') &#x9996;&#x9875;
+        |               
+        a.link(href='javascript:void(0);') &#x7535;&#x8111;&#x7248;
+        |               
+        a.link(href='javascript:void(0);') &#x5BA2;&#x6237;&#x7AEF;
+        |               
+        a.link(href='javascript:void(0);') &#x4FE1;&#x606F;&#x53CD;&#x9988;
+        |               
+        a.link(href='javascript:void(0);') &#x5E2E;&#x52A9;
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号
+    |   
+    |   
+    script(type='text/javascript').
+      var urlparam = window.location.search.substr(1).split('&');
+      var splitparam = {};
+      for(var j=0;j<urlparam.length;j++){
+         var tempparam = urlparam[j].split("=");
+         console.log(tempparam[0] +  " /  " + tempparam[1])
+         splitparam[tempparam[0]] = tempparam[1];
+      }
+
+      console.log("now city" + splitparam["city"]);
+      var panorama = new BMap.Panorama('streepmapcontainer'); //默认为显示道路指示控件
+      panorama.setPosition(new BMap.Point(splitparam.pointx,splitparam.pointy));

@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    title 移动点单-我的账号
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/accountinfo.css')
+  body.accountinfo-body
+    header.list-header
+      a.back-operate(href='http://yequan.ren/eshop/userhome')
+        i.arrow-left
+      | &#x9;     
+      a.home-link(href='http://yequan.ren/eshop/')
+        i.home
+      | &#x9;    
+      .head-title 我的账号
+    | &#x9;
+    article
+      .accountifno
+        a.jyh(href='javascript:void(0);') 聚优惠
+        | &#x9;   &#x9;   
+        a.wdydd(href='javascript:void(0);') 我的邮递单
+        | &#x9;   &#x9;   
+        a.wdsc(href='javascript:void(0);') 我的收藏
+      |         
+      p.form-btn
+        a.sms-submit(href='http://yequan.ren/eshop/accountinfo/logout') 退出登录
+    |     
+    footer#footer.footer
+      section.link-block
+        a.link(href='javascript:void(0);') 首页
+        |               
+        a.link(href='javascript:void(0);') 电脑版
+        |               
+        a.link(href='javascript:void(0);') 客户端
+        |               
+        a.link(href='javascript:void(0);') 信息反馈
+        |               
+        a.link(href='javascript:void(0);') 帮助
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号

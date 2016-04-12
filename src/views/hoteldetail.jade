@@ -1,0 +1,294 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    | &#x9;  
+    title &#x9526;&#x6C5F;&#x4E4B;&#x661F;&#x5317;&#x4EAC;&#x5965;&#x4F53;&#x4E2D;&#x5FC3;&#x5E97;&#x56E2;&#x8D2D;
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    meta(name='keywords', content='移动点单')
+    |     
+    meta(name='description', content='仅218元！价值398元的锦江之星北京奥体中心店入住1晚，标准间A/商务间A2选...')
+    | &#x9;    
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/detailheader.css')
+    | &#x9;    
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/hotel-detail.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |       
+    link(rel='stylesheet', type='text/css', href='stylesheets/carousel.css')
+  body.detail-page
+    header.detail-header
+      a.back-icon(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+      |          
+      a.home-icon(href='http://yequan.ren/eshop/')
+      |          
+      a.search-icon(href='javascript:void(0);')
+    |      
+    |      
+    article
+      section.detail-image
+        .dimage
+          a.image-wrap(href='javascript:void(0);')
+            img(src='#{nowitem["item-detail"]["item-detail-img"]}', alt='')
+          |                
+          .album
+            | &#x70B9;&#x51FB;&#x56FE;&#x7247;&#x67E5;&#x770B;&#x76F8;&#x518C;
+            a.collect-icon(href='javascript:void(0);')
+              // shoucangtubiao 缺
+        |             
+        .dtitle
+          h3.title #{nowitem["item-detail"]["item-detail-name"]}
+          |                  
+          p.desc #{nowitem["item-detail"]["item-detail-desc"]}
+      |         
+      section.detail-desc
+        .detail-topten
+        |           
+        .detail-privilege
+        |           
+        .detail-policy
+          - if( nowitem["item-detail"]["item-detail-suibiantui"] === true )
+              a.policy-item.suibiantui(href='javascript:void(0);')
+                &#x672A;&#x6D88;&#x8D39;&#x968F;&#x4FBF;&#x9000; 
+          - if( nowitem["item-bought"] && nowitem["item-bought"] >= 0 )               
+              a.policy-item.yishouchu(href='javascript:void(0);')
+                已售 #{nowitem["item-bought"]}
+          - if( nowitem["item-detail"]["item-detail-shengyujitian"] && nowitem["item-detail"]["item-detail-shengyujitian"] >= 0 )            
+              a.policy-item.shengyujitian(href='javascript:void(0);')
+                &#x5269;&#x4F59;#{nowitem["item-detail"]["item-detail-shengyujitian"]}&#x5929;&#x4EE5;&#x4E0A;        
+          |                  
+          .clear  
+      |         
+      section.ugc-preview
+        a.ugcbtn(href='javascript:void(0);')
+          .score-star
+            .star-gray.star-type-1
+              .star-real
+            |                   
+            span.score #{nowitem["item-detail"]["item-detail-score"]}
+          |  
+          | 
+          - if(nowitem["item-detail"]["item-detail-commentcount"] && nowitem["item-detail"]["item-detail-commentcount"] >= 0)
+              span.count #{nowitem["item-detail"]["item-detail-commentcount"]}&#x4EBA;&#x8BC4;&#x4EF7;
+      |         
+      section.merchant
+        .merchant-info
+          .merchant-cnt
+            a(href='javascript:void(0);')
+              h4.title &#x9526;&#x6C5F;&#x4E4B;&#x661F;&#x5317;&#x4EAC;&#x5965;&#x4F53;&#x4E2D;&#x5FC3;&#x5E97;
+              |                      
+              p.address &#x5317;&#x4EAC;&#x5B89;&#x5B9A;&#x95E8;&#x5916;&#x5B89;&#x82D1;&#x91CC;1&#x53F7; &#x5317;&#x4EAC;&#x5965;&#x6797;&#x5339;&#x514B;&#x4F53;&#x80B2;&#x4E2D;&#x5FC3;&#x4E1C;&#x95E8;&#x4E1C;&#x4FA7; &#x7D27;&#x90BB;&#x5B89;&#x8D1E;&#x95E8;&#x5730;&#x94C1;&#x7AD9;
+            |                    
+            .other
+              a.tel(href='javascript:void(0);') &#x7535;&#x8BDD;
+              |                      
+              a.huanjing(href='javascript:void(0);') &#x73AF;&#x5883;
+              |                      
+              .clear  
+      |         
+      section.nav-wrap
+        .nav-title
+          a.nav.taocan(href='javascript:void(0);') &#x5957;&#x9910;
+          |                 
+          a.nav.notice(href='javascript:void(0);') &#x63D0;&#x793A;
+          |                 
+          a.nav.ugc(href='javascript:void(0);') &#x8BC4;&#x4EF7;
+          |                 
+          a.nav.recom(href='javascript:void(0);') &#x63A8;&#x8350;
+          |                 
+          .clear  
+      |         
+      section.panel-taocan
+        .hd &#x5957;&#x9910;&#x5185;&#x5BB9;
+        |               
+        .rich-text
+          .content
+            // content
+            include hoteldetail-taocan.jade
+      |         
+      section.panel-notice
+        .hd &#x5957;&#x9910;&#x5185;&#x5BB9;
+        |               
+        .rich-text
+          .content
+            // content
+            include hoteldetail-notice.jade
+      |         
+      section.panel-ugc
+        .hd &#x7528;&#x6237;&#x8BC4;&#x4EF7;
+        |           
+        .ugc-segment
+          .title.ugcbtn(href='javascript:void(0);')
+            .score-star
+              .star-gray.star-type-1
+                .star-real
+              |                     
+              span.score 4.1
+            |  
+            |                 
+            span.count 6&#x4EBA;&#x8BC4;&#x4EF7;
+          |               
+          .ugc-label
+            .ugc-label-content
+              a.label-text(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              a.label-text(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              a.label-text(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              a.label-text(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              a.label-text(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              a.label-text.label-type-1(href='javascript:void(0);') &#x9152;&#x5E97;&#x73AF;&#x5883;&#x4E0D;&#x9519;(2)
+              |                       
+              .clear  
+          |               
+          .ugc-list
+            // comment
+            - var nowitemcomment = nowitem["item-detail"]["item-detail-comment"];
+            - for(var i=0;i<nowitemcomment.length && i < 4;i++){
+                include hoteldetail-comment.jade
+            - }
+          |     
+          |               
+          |               
+          .ugc-more
+            a.link(href='javascript:void(0);') &#x67E5;&#x770B;&#x5168;&#x90E8;6&#x6761;&#x8BC4;&#x4EF7;
+      |         
+      section.panel-recom
+        .other-recom-wrapper
+          .hd &#x672C;&#x5546;&#x5BB6;&#x5176;&#x4ED6;&#x70ED;&#x5356;&#x5957;&#x9910;
+          |                
+          .other-recom
+            // qitataocan
+            - for(var i=0;i<otheritem.length;i++){
+                include hoteldetail-qitataocan.jade
+            - }
+        |            
+        .same-recom-wrapper
+          .hd &#x540C;&#x7C7B;&#x70ED;&#x5356;&#x63A8;&#x8350;
+          |                
+          .same-recom
+            #same-recom-container.static-container
+              .swiper-free-mode.carousel-inner
+                ol
+                  // remai8
+                  - for(var i=0;i<remai.length;i++){
+                      include hoteldetail-remai.jade
+                  - }
+                  .clear  
+        |            
+        .near-recom-wrapper
+          .hd &#x9644;&#x8FD1;&#x70ED;&#x5356;&#x63A8;&#x8350;
+          |                
+          .recom-wrapper
+            #near-recom-container.static-container
+              .swiper-free-mode.carousel-inner
+                ol
+                  // remai8
+                  - for(var i=0;i<remai.length;i++){
+                      include hoteldetail-remai.jade
+                  - }
+                  .clear  
+      |         
+      section.detail-cate
+        a.all-cate(href='javascript:void(0);')
+          | &#x67E5;&#x770B;&#x5168;&#x90E8;&ldquo;&#x9152;&#x5E97;&rdquo;&#x7C7B;&#x76EE;&#x56E2;&#x8D2D;
+      |         
+      section.rs-word
+        ul.u-rs-word
+          li
+            a.word(href='javascript:void(0);') &#x9526;&#x6C5F;&#x4E4B;&#x661F;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x5965;&#x4F53;&#x4E2D;&#x5FC3;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x81EA;&#x52A9;&#x9910;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x86CB;&#x7CD5;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x706B;&#x9505;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x4E1C;&#x65B9;&#x997A;&#x5B50;&#x738B;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x8FA3;&#x5BB6;&#x79C1;&#x53A8;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x6DF1;&#x6D77;800&#x7C73;&#x6D77;&#x9C9C;&#x81EA;&#x52A9;
+          |                 
+          li
+            a.word(href='javascript:void(0);') &#x4E1C;&#x5317;&#x83DC;
+          |                 
+          .clear  
+      |         
+      section.buy-btn-wrap
+        .buy-segment
+          span.current-price
+            span.price-value #{nowitem["item-price-line"]}
+          |               
+          span.original-price
+            del #{nowitem["item-old-price"]}
+          |               
+          .buy-wrapper
+            .normal-buy
+              a.buy-now(href='javascript:void(0);')
+                | &#x7ACB;&#x5373;&#x62A2;&#x8D2D;
+    |     
+    section.search-wrapper
+      form.detail-search(action='')
+        .input-wrapper
+          input.input(type='text')
+          |                 
+          button.submit
+          |                 
+          button.cancel &#x5173;&#x95ED;
+    |      
+    |      
+    footer#footer.footer
+      section.info-block
+        .city-wrap
+          span.city
+            | &#x57CE;&#x5E02;&#xFF1A;
+          |                 
+          a.city-area.info-link(href='javascript:void(0);')
+            | &#x5317;&#x4EAC;
+        |              
+        .usr-wrap
+          a.nuomiquan.info-link(href='javascript:void(0);') 优惠券(0)
+          |                  
+          a.waitpaid.info-link(href='javascript:void(0);') 待付款(0)
+      |           
+      section.link-block
+        a.link(href='javascript:void(0);') &#x9996;&#x9875;
+        |               
+        a.link(href='javascript:void(0);') &#x7535;&#x8111;&#x7248;
+        |               
+        a.link(href='javascript:void(0);') &#x5BA2;&#x6237;&#x7AEF;
+        |               
+        a.link(href='javascript:void(0);') &#x4FE1;&#x606F;&#x53CD;&#x9988;
+        |               
+        a.link(href='javascript:void(0);') &#x5E2E;&#x52A9;
+      |           
+      section.copyright-block
+        | yequan.ren 闽ICP备16004418号
+    |    
+    |      
+    a.goTop(href='#')  

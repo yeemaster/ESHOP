@@ -1,0 +1,13 @@
+.mct-info
+  .img-wrap
+    img(src='#{pro.headimg}', alt='')
+  |     
+  .content
+    h1.name #{pro.name}
+    |         
+    .score
+      .score-star
+        .star-gray
+          .star-real
+a.mct-addr(href='http://yequan.ren/eshop/shopmap?city=#{pro.city}&pointx=#{pro["point-x"]}&pointy=#{pro["point-y"]}&name=#{pro.name}')
+  | #{pro.addr}

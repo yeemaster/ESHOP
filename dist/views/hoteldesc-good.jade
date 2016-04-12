@@ -1,0 +1,12 @@
+// 3  #{goodArray[i]["_id"]}
+a.good-content(href='http://yequan.ren/eshop/hoteldetail?id=' + '#{goodArray[i]["_id"]}' + "&preid=" + '#{pro["_id"]}')
+  .info-wrapper
+    p.desc
+      | #{goodArray[i]["item-desc"]}
+    |         
+    p.price-line
+      ins #{goodArray[i]["item-price-line"]}
+      |             
+      del.old-price #{goodArray[i]["item-old-price"]}
+      |             
+      span.bought 已售#{goodArray[i]["item-bought"]}

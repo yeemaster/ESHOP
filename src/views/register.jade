@@ -1,0 +1,71 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    |     
+    title 移动点单-用户注册
+    |     
+    meta(name='viewport', content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    |     
+    meta(name='format-detection', content='telephone=no')
+    |     
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    |     
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/common.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/header.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/footer.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
+    |     
+    link(rel='stylesheet', type='text/css', href='stylesheets/aboutform.css')
+    script(data-main='javascripts/main.js',src='libs/require.js',id='main')
+  body.aboutform-body(webtitle='register_html')
+    header.list-header
+      a.back-operate(href='http://yequan.ren/eshop/login')
+        i.arrow-left
+      |       
+      .lr-head-title 注册账号
+    | &#x9;
+    |   
+    article
+      form.form-wrap(action='http://yequan.ren/eshop/register',method='post')
+        p#error.error_area #{errmsg}
+        |   &#x9; &#x9;  
+        p.register-tip 注册成功后，可用于登录所有产品
+        |         
+        p.form-p-wrap
+          label.form-lbl(for='inputtel')
+            | 手机号
+          |             
+          input#inputtel.form-in(type='text', name='inputtel', placeholder='填写手机号')
+        |   
+        p.form-p-wrap
+          label.form-lbl(for='inputusername')
+            | 用户名
+          |             
+          input#inputusername.form-in(type='text', name='inputusername',min='6',max='14', placeholder='用户名6-14位用户名，建议数字，字母，符号组合')
+        |              
+        p.form-p-wrap
+          label.form-lbl(for='inputpwd')
+            | &#x5BC6;&#x7801;
+          |             
+          input#inputpwd.form-in(type='password', name='inputpwd', maxlength= 14,placeholder='6-14位密码')
+        |         
+        p.form-p-wrap
+          label.form-lbl(for='inputyzm')
+            | 验证码
+          |              
+          input#inputyzm.form-in(type='text', name='inputyzm', placeholder='验证码(8888)')
+          |              
+          button.pass-button-auto 发送验证码
+        |         
+        p.form-btn
+          button.sms-submit(type='submit') 注册
+      |         
+      p.yonghuxieyi
+        | 阅读并接受
+        a(href='javascript:void(0);') &lt;&lt; 用户服务协议 &gt;&gt;

@@ -1,0 +1,15 @@
+a.good-content(href='http://yequan.ren/eshop/hoteldetail?id='+ '#{subPro[j]["_id"]}' + "&preid=" + '#{proitems[i]["_id"]}')
+  .img-wrapper
+    .img-placeholder
+      img(src='#{subPro[j]["item-img"]}', alt=' ')
+  |     
+  .info-wrapper
+    p.desc
+      | #{subPro[j]["item-desc"]}
+    |         
+    p.price-line
+      ins #{subPro[j]["item-price-line"]}
+      |             
+      del.old-price #{subPro[j]["item-old-price"]}
+      |             
+      span.bought 已售#{subPro[j]["item-bought"]}

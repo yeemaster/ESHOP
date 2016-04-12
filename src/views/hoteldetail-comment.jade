@@ -1,0 +1,16 @@
+.ugc-content
+  .user
+    .name #{nowitemcomment[i]["comment-name"]}
+    |       
+    .date #{nowitemcomment[i]["comment-date"]}
+    |       
+    .score-star
+      .star-gray.star-type-2
+        .star-real(style='width:20px')
+  |   
+  .comment
+    .comment-content
+      p.comment-overtext
+        | #{nowitemcomment[i]["comment-conetnt"]}
+    |       
+    a.comment-more(href='javascript:void(0);')
