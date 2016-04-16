@@ -38,7 +38,7 @@ gulp.task('ysjade',function(){
 
 // 脚本检查
 gulp.task('lint', function () {
-    gulp.src('./src/public/javascripts/**/*.js')
+    return gulp.src('./src/public/javascripts/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
         // .pipe(notify({ message: 'lint task complete' }));
@@ -47,7 +47,7 @@ gulp.task('lint', function () {
 
 //require合并
 gulp.task('rjs', function () {
-    gulp.src('./src/public/javascripts/main.js')
+    return gulp.src('./src/public/javascripts/main.js')
         .pipe(amdOptimize("main", {
                 paths: {                    //如果某个前缀的依赖不是按照baseUrl拼接这么简单，就需要在这里指出
                     "zepto": "./src/public/libs/zepto.min",
