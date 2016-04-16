@@ -16,6 +16,7 @@ var hoteldesc = require('./routes/hoteldesc');
 var hoteldetail = require('./routes/hoteldetail');
 var streetmap = require('./routes/streetmap');
 var shopmap = require('./routes/shopmap');
+var dbInit = require('./models/db');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+dbInit();
 
 app.use('/', routes);
 app.use('/users', users);

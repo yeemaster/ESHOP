@@ -18,7 +18,7 @@
 }
 
 .form-wrap .error_area{
-    min-height: 14px;
+    min-height: 28px;
     /*padding: 5px 10px 5px 18px;*/
     padding: 5px 10px 5px 10px;
 
@@ -48,16 +48,17 @@
 
 
 .form-p-wrap .form-lbl{
-    width: 45px;
+    width: 74px;
     margin-right: 10px;
     padding-left: 0;
     font-size: 14px;
-    line-height: 48px;  
+    line-height: 48px;
+    display: inline-block;
 }
 
 .form-p-wrap .form-in{
     border: none;
-    width: 80%;
+    width: 70%;
     overflow: hidden;
 }
 
