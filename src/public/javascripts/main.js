@@ -15,7 +15,7 @@
             "jquery": "libs/jquery-2.1.4.min",            
             "indexmain": "javascripts/index-main",
             "registermain": "javascripts/register-main",
-            "loginmain": "javascripts/login-main",
+            "loginmain": "javascripts/login-main"
         },
         shim: {                     //引入没有使用requirejs模块写法的类库。
             zepto: {

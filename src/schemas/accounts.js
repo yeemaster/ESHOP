@@ -8,10 +8,4 @@ var accountSchema = new Schema({
       lastlogintime:{type:String}
 });
 
-
-
-
-
-
-
 module.exports = accountSchema;

@@ -124,6 +124,7 @@ router.post('/',function(req,res,next){
     getLastLoginTime(req,res,userTel);
 });
 
+
 function loginVerifyteTel(userTel,callback){
   if(!userModel){
     callback(2); //连接中断

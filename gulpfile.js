@@ -12,12 +12,14 @@ var watch = require('gulp-watch');
 var minifycss = require('gulp-minify-css');
 var jade = require('gulp-jade');
 // var notify = require('gulp-notify');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Styles任务
 gulp.task('yscss', function() {
     return gulp.src('./src/public/stylesheets/**/*.css')
+    .pipe(autoprefixer())
     //压缩样式文件
-    .pipe(minifycss())
+    // .pipe(minifycss())
     //输出压缩文件到指定目录
     .pipe(gulp.dest('./dist/public/stylesheets/'));
     //提醒任务完成
@@ -68,9 +70,25 @@ gulp.task('rjs', function () {
         }))
         .pipe(concat("main.js"))           //合并
         .pipe(gulp.dest("./dist/public/javascripts/"))          //输出保存
-        .pipe(uglify())                        //压缩
+        // .pipe(uglify())                        //压缩
         .pipe(gulp.dest("./dist/public/javascripts/"));         //输出保存
         // .pipe(notify({ message: 'rjs task complete' }));
+});
+
+
+gulp.task('routes',function(){
+    return gulp.src('./src/routes/**/*.js')
+    .pipe(gulp.dest('./dist/routes/'));
+});
+
+gulp.task('models',function(){
+    return gulp.src('./src/models/**/*.js')
+    .pipe(gulp.dest('./dist/models/'));
+});
+
+gulp.task('schemas',function(){
+    return gulp.src('./src/schemas/**/*.js')
+    .pipe(gulp.dest('./dist/schemas/'));
 });
 
 
@@ -89,4 +107,16 @@ gulp.task('default', function () {
     gulp.watch('./src/views/**/*.jade', function () {       //当jade文件变化后，自动检验 压缩
         gulp.run('ysjade');
     });
+
+    gulp.watch('./src/routes/**/*.js', function () {       //当routes文件变化后，自动检验 压缩
+        gulp.run('routes');
+    });
+
+    gulp.watch('./src/models/**/*.js', function () {       //当models文件变化后，自动检验 压缩
+        gulp.run('models');
+    });
+
+     gulp.watch('./src/schemas/**/*.js', function () {       //当schemas文件变化后，自动检验 压缩
+        gulp.run('schemas');
+    });           
 });

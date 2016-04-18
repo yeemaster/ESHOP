@@ -24,10 +24,10 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/userhome.css')
   body.userhome-body
     header.list-header
-      a.back-operate(href='http://yequan.ren/eshop/login')
+      a.back-operate(href='#{_var_net}/login')
         i.arrow-left
       | &#x9;     
-      a.home-link(href='http://yequan.ren/eshop/')
+      a.home-link(href='#{_var_net}/')
         i.home
       | &#x9;    
       .head-title 我的账号
@@ -36,7 +36,7 @@ html(lang='en')
     | &#x9;
     article
       .userinfo
-        a.userinfo-in(href='http://yequan.ren/eshop/accountinfo')
+        a.userinfo-in(href='#{_var_net}/accountinfo')
           .username #{username}
       | &#x9;   &#x9;
       .bindtel

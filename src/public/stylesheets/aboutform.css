@@ -7,11 +7,6 @@
     font-family: "Tahoma, Helvetica, "Microsoft Yahei", "微软雅黑", Arial, STHeiti";
 }
 
-.aboutform-body{
-	min-width: 375px;
-}
-
-
 .form-wrap{
     padding: 0 10px;
     -webkit-box-sizing: border-box;	
@@ -58,7 +53,7 @@
 
 .form-p-wrap .form-in{
     border: none;
-    width: 70%;
+    width: 65%;
     overflow: hidden;
 }
 

@@ -1,1 +1,140 @@
-.good-content{display:block;padding:12px 12px 12px 0;margin-left:12px;border-bottom:1px solid #fff}.good-content .img-wrapper{float:left;width:96px;overflow:hidden}.good-content .img-wrapper .img-placeholder{position:relative;display:block;background:url(../images/index-page/article/goodsbackground01.png) no-repeat;background-size:100% 100%}.reservation{position:absolute;left:0;top:0;height:36px;width:36px;background:url(../images/index-page/article/reservation01.png) no-repeat;background-size:36px 36px}.good-content .img-wrapper .img-placeholder img{display:block;width:120px;margin-left:-12px}.good-content .info-wrapper{position:relative;margin-left:108px}.good-content .info-wrapper .title-line{line-height:16px;height:16px;overflow:hidden}.good-content .info-wrapper .title-line .title{float:left}.good-content .info-wrapper .title-line .title .item-name{font-size:16px;color:#22222d;overflow:hidden}.good-content .info-wrapper .title-line .store{float:right;color:#88888d;font-size:12px;-webkit-transform:scale(.91666667);-webkit-transform-origin:50% 50%}.good-content .info-wrapper .desc{line-height:16px;height:32px;margin:4px 0;overflow:hidden;font-size:12px;color:#88888d}.good-content .price-line{line-height:16px;height:16px;color:#ff4683;overflow:hidden}.good-content .price-line ins:before{content:"¥"}.good-content .price-line ins{margin-right:5px;font-size:16px;font-weight:700;text-decoration:none}.good-content .price-line .old-price{margin-right:5px;font-size:12px;color:#88888d}.good-content .price-line .privilege-icon{position:relative;top:-2px;display:inline-block;border:1px solid #ff4683;border-radius:2px;line-height:13px;height:13px}.good-content .price-line .privilege-icon .text{display:block;font-style:normal;font-size:12px;-webkit-transform:scale(.91666667);-webkit-transform-origin:50% 50%}.good-content .price-line .bought{float:right;margin-left:16px;font-size:12px;color:#88888d}
+.good-content{
+    display: block;
+    padding: 12px 12px 12px 0;
+    margin-left: 12px;
+    border-bottom: 1px solid #fff;
+}
+
+ .good-content .img-wrapper{
+	float: left;
+     width: 96px;
+     overflow: hidden;	
+}
+
+ .good-content .img-wrapper .img-placeholder
+{
+	position: relative;
+	display: block;
+	background: url(../images/index-page/article/goodsbackground01.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+ .reservation{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 36px;
+    width: 36px;
+    background: url(../images/index-page/article/reservation01.png) no-repeat;
+    background-size: 36px 36px;
+}
+
+ .good-content .img-wrapper .img-placeholder img
+{   
+	display: block;
+	width: 120px;
+	margin-left: -12px;
+}
+
+ .good-content .info-wrapper{
+    position: relative;
+    margin-left: 108px;    
+}
+
+ .good-content .info-wrapper .title-line{
+    line-height:16px; 
+    height:16px;
+    overflow: hidden;
+}
+
+ .good-content .info-wrapper .title-line .title{
+	float: left;
+}
+
+ .good-content .info-wrapper .title-line .title .item-name{
+	font-size: 16px;
+    color: #22222d;
+    overflow: hidden;
+/*    white-space: nowrap;
+    text-overflow: ellipsis;  */  
+}
+
+ .good-content .info-wrapper .title-line .store{
+	float: right;
+    color: #88888d;
+    font-size: 12px;
+    -webkit-transform: scale(.91666667);
+    -webkit-transform-origin: 50% 50%;
+}
+
+ .good-content .info-wrapper  .desc{
+	line-height: 16px;
+    height: 32px;
+    margin: 4px 0;
+    overflow: hidden;
+    /*display: -webkit-box;*/
+/*    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;*/
+    font-size: 12px;
+    color: #88888d;
+}
+
+ .good-content .price-line{
+	line-height: 16px;
+    height: 16px;
+    color: #ff4683;
+    overflow: hidden;
+}
+
+ .good-content .price-line ins:before{
+	 content: "¥";
+}
+
+ .good-content .price-line ins
+{
+	margin-right: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+ .good-content .price-line .old-price
+{
+	margin-right: 5px;
+    font-size: 12px;
+    color: #88888d;
+}
+
+ .good-content .price-line .privilege-icon
+{
+	position: relative;
+    top: -2px;
+    display: inline-block;
+    border: 1px solid #ff4683;
+    border-radius: 2px;
+    line-height: 13px;
+    height: 13px;
+}
+
+
+ .good-content .price-line .privilege-icon .text
+{
+	display: block;
+    font-style: normal;
+    font-size: 12px;
+        -webkit-transform: scale(.91666667);
+    -webkit-transform-origin: 50% 50%;
+}
+
+ .good-content .price-line .bought
+{
+	float: right;
+    margin-left: 16px;
+    font-size: 12px;
+    color: #88888d;
+
+/*    -webkit-transform: scale(.91666667);
+    transform: scale(.91666667);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;  */
+}

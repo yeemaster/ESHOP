@@ -426,6 +426,12 @@
 }
 
 /*swiper-free-mode*/
+.recom-good{
+    display: inline-block;
+    width: 115px;
+    height: 86px;
+}
+
 .recom-good .img-wrap{
     width: 115px;
     height: 86px;
@@ -433,6 +439,11 @@
     background: url(../images/home-detail-page/article/bck.png) no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;	
+}
+
+.recom-good .img-wrap img{
+    width: 115px;
+    height: 86px;
 }
 
 .recom-good .title{

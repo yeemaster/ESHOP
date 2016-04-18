@@ -37,7 +37,7 @@ define(function(){
 
     return {
         doCarousel : function(myCarousel){
-            console.log(myCarousel);
+            // console.log(myCarousel);
             var lis = myCarousel.getElementsByTagName("ol")[0].getElementsByTagName("li");
             var carouselinner = myCarousel.getElementsByClassName("carousel-inner")[0];
             var now = 0;
@@ -56,10 +56,10 @@ define(function(){
             //可以拉动几次
             var lnum = Math.floor(lislength / parseFloat(myCarousel.offsetWidth));
 
-            console.log(lislength);
-            console.log(myCarousel.offsetWidth);
-            console.log(lenX);
-            console.log(lnum);
+            // console.log(lislength);
+            // console.log(myCarousel.offsetWidth);
+            // console.log(lenX);
+            // console.log(lnum);
 
 
             //少于一个屏幕宽就不用拉动
@@ -152,9 +152,9 @@ define(function(){
 
             function tab(){
                 for(var i = 0;i<abtn.length;i++){
-                    abtn[i].className = "";
+                    if(abtn[i]) abtn[i].className = "";
                 }
-                abtn[now].className = "active";
+                if(abtn[now]) abtn[now].className = "active";
                 carouselinner.timer = null;
                 // move(carouselinner,(-1 * myCarousel.offsetWidth * now));
                 carouselinner.style.left = (-1 * myCarousel.offsetWidth * now) + 'px';
@@ -246,24 +246,24 @@ define(function(){
                         now = lastposition;
                         carouselinner.style.left =  (-1 * myCarousel.offsetWidth * now) + "px";
                      }
-                     console.log('next'+now);
+                     // console.log('next'+now);
               }); 
             }
 
             carouselinner.style.left = -1 * myCarousel.offsetWidth + "px";
 
             function tab(){
-                console.log(now);
+                // console.log(now);
                 for(var i = 0;i<abtn.length;i++){
-                    abtn[i].className = "";
+                    if(abtn[i]) abtn[i].className = "";
                 }
 
                 if(now == items.length-1){
-                    abtn[initposition].className = "active";
+                    if(abtn[initposition]) abtn[initposition].className = "active";
                 }else if(now === 0){
-                    abtn[lastposition].className = "active";
+                    if(abtn[lastposition]) abtn[lastposition].className = "active";
                 }else{
-                    abtn[now].className = "active";
+                    if(abtn[now]) abtn[now].className = "active";
                 }
 
                 carouselinner.style.left = (-1 * myCarousel.offsetWidth * now) + "px";
@@ -272,13 +272,13 @@ define(function(){
             function next(){
                 carouselinner.style.transition="all 300ms ease";
                 now ++ ;
-                console.log('next'+now);
+                // console.log('next'+now);
                 tab();
             }
              function prev(){
                 carouselinner.style.transition="all 300ms ease";
                 now -- ;
-                console.log('next'+now);
+                // console.log('next'+now);
                 tab();
             }
 

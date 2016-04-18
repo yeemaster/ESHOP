@@ -54,7 +54,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                 isinputtelok = false;
             }else{
                     $.ajax({
-                      url: 'http://yequan.ren/eshop/register/verifytel',
+                      url: 'http://localhost:3000/register/verifytel',
                       type: 'POST',
                       dataType: 'json',
                       data: {'telNo' : telno}
@@ -90,7 +90,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                 isinputusername = false;
             }else{
                 $.ajax({
-                  url: 'http://yequan.ren/eshop/register/verifyuser',
+                  url: 'http://localhost:3000/register/verifyuser',
                   type: 'POST',
                   dataType: 'json',
                   data: {'username' : username}
@@ -167,7 +167,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
           };
 
           $.ajax({
-            url: 'http://yequan.ren/eshop/register',
+            url: 'http://localhost:3000/register',
             type: 'POST',
             dataType: 'json',
             async:false,
@@ -178,7 +178,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                    error.innerHTML = msg.errmsg;
                    verify.gettiaozhuan(error);
                    setTimeout(function(){
-                        window.location.href = "http://yequan.ren/eshop/login";
+                        window.location.href = "http://localhost:3000/login";
                    },3000);
                }else{
                    error.innerHTML = '';          

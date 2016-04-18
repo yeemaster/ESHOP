@@ -25,17 +25,17 @@ html
     script(data-main='javascripts/main.js',src='libs/require.js',id='main')    
   body.aboutform-body(webtitle='login_html')
     header.list-header
-      a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
+      a.back-operate(href='#{_var_net}')
         i.arrow-left
       |        
-      a.register-btn(href='http://yequan.ren/eshop/register')
+      a.register-btn(href='#{_var_net}/register')
         | 注册
       |       
       .lr-head-title 短信快捷登录
     |       
     |   
     article
-      form.form-wrap(action='http://yequan.ren/eshop/login',method='post')
+      form.form-wrap(action='#{_var_net}/login',method='post')
         p#error.error_area #{errmsg}
         |           
         p.account-login

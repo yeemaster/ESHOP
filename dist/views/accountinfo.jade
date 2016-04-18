@@ -24,10 +24,10 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/accountinfo.css')
   body.accountinfo-body
     header.list-header
-      a.back-operate(href='http://yequan.ren/eshop/userhome')
+      a.back-operate(href='#{_var_net}/userhome')
         i.arrow-left
       | &#x9;     
-      a.home-link(href='http://yequan.ren/eshop/')
+      a.home-link(href='#{_var_net}/')
         i.home
       | &#x9;    
       .head-title 我的账号
@@ -41,7 +41,7 @@ html(lang='en')
         a.wdsc(href='javascript:void(0);') 我的收藏
       |         
       p.form-btn
-        a.sms-submit(href='http://yequan.ren/eshop/accountinfo/logout') 退出登录
+        a.sms-submit(href='#{_var_net}/accountinfo/logout') 退出登录
     |     
     footer#footer.footer
       section.link-block

@@ -41,7 +41,7 @@ html(lang='en')
       a.back-operate(href='javascript:void(0);',onclick='javascript:history.go(-1);')
         i.arrow-left
       |          
-      a.home-link(href='http://yequan.ren/eshop/')
+      a.home-link(href='#{_var_net}/')
         i.home
       |         
       .head-title &#x5546;&#x6237;&#x8BE6;&#x60C5;
@@ -55,7 +55,7 @@ html(lang='en')
           |               
           a.icon.envt(href='javascript:void(0);') &#x73AF;&#x5883;
           |               
-          a.icon.panoramic(href='http://yequan.ren/eshop/streetmap?city=#{pro.city}&pointx=#{pro["point-x"]}&pointy=#{pro["point-y"]}') &#x5168;&#x666F;
+          a.icon.panoramic(href='#{_var_net}/streetmap?city=#{pro.city}&pointx=#{pro["point-x"]}&pointy=#{pro["point-y"]}') &#x5168;&#x666F;
       |        
       section.good-container.mct-good-container
         .list-poi-goods

@@ -25,14 +25,14 @@ html
     script(data-main='javascripts/main.js',src='libs/require.js',id='main')
   body.aboutform-body(webtitle='register_html')
     header.list-header
-      a.back-operate(href='http://yequan.ren/eshop/login')
+      a.back-operate(href='#{_var_net}/login')
         i.arrow-left
       |       
       .lr-head-title 注册账号
     | &#x9;
     |   
     article
-      form.form-wrap(action='http://yequan.ren/eshop/register',method='post')
+      form.form-wrap(action='#{_var_net}/register',method='post')
         p#error.error_area #{errmsg}
         |   &#x9; &#x9;  
         p.register-tip 注册成功后，可用于登录所有产品
@@ -41,7 +41,7 @@ html
           label.form-lbl(for='inputtel')
             | 手机号
           |             
-          input#inputtel.form-in(type='text', name='inputtel', placeholder='填写手机号')
+          input#inputtel.form-in(type='text', name='inputtel',maxlength= 14 ,placeholder='填写手机号')
         |   
         p.form-p-wrap
           label.form-lbl(for='inputusername')
@@ -65,7 +65,7 @@ html
           label.form-lbl(for='inputyzm')
             | 手机验证码
           |              
-          input#inputyzm.form-in(type='text', name='inputyzm', placeholder='验证码(8888)')
+          input#inputyzm.form-in(type='text', name='inputyzm',maxlength= 6, placeholder='验证码(8888)')
           |              
           button.pass-button-auto 发送验证码
         |         

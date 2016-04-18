@@ -105,6 +105,7 @@ h1, h2, h3, h4, h5, p, span {
 }
 
 body{
-    max-width: 640px;
+    max-width: 768px;
     margin: 0px auto;
+    min-width: 320px;
 }

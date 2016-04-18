@@ -1,1 +1,162 @@
-.good-container{position:relative}.good-container .list-poi-goods{margin-top:10px}.good-container .list-poi-goods .poi{margin-bottom:10px;background-color:#fff}.good-container .list-poi-goods .poi .poi-header{display:block;padding:12px}.good-container .list-poi-goods .poi .title-line{line-height:16px;height:16px;overflow:hidden}.good-container .list-poi-goods .poi .title-line .title{display:inline-block;max-width:100%;font-size:16px;color:#22222d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.good-container .list-poi-goods .poi .sub-title{line-height:12px;height:12px;margin-top:10px;font-size:12px;overflow:hidden;color:#88888d}.good-container .list-poi-goods .poi .sub-title .store{float:right}.good-container .list-poi-goods .poi .sub-title .score{float:left;margin-right:16px;color:#ff7e00}.good-container .list-poi-goods .poi .sub-title .user{float:left}.good-container .good-content .img-wrapper{width:84px}.good-container .list-poi-goods .good-content .img-wrapper img{width:108px;height:64px}.good-container .list-poi-goods .poi .good .good-content .info-wrapper .desc{line-height:18px;height:36px;margin:0 0 15px;font-size:14px;color:#55555d;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.good-container .list-poi-goods .poi .good .good-content.good-hide,.good-container .list-poi-goods .poi .poi-footer .put{display:none}.good-container .list-poi-goods .poi .poi-footer{line-height:40px;height:40px;text-align:center;font-size:13px;color:#55555d}.good-container .list-poi-goods .poi .poi-footer:after{content:'';display:inline-block;position:relative;top:-2px;left:8px;-webkit-transition:.5s;transition:.5s;width:7px;height:7px;border-bottom:1px solid #111;border-left:1px solid #111;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.list-viewmore{padding:0 10px 10px;height:31px;margin-top:10px}.list-viewmore .list-gotop,.viewmore-block .status{height:29px;line-height:29px;font-size:13px;text-align:center;background-color:#fff;color:#303030}.list-viewmore .list-gotop{float:right;width:78px;border:1px solid #e0e0e0;border-radius:3px}.viewmore-block{width:213px;padding:0}.viewmore-block .status{border:1px solid #e0e0e0;border-radius:3px;width:90%;cursor:pointer;margin:auto}
+.good-container{
+	position: relative;
+}
+
+.good-container .list-poi-goods{
+	margin-top: 10px;
+}
+
+.good-container .list-poi-goods .poi{
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.good-container .list-poi-goods .poi .poi-header{
+   display: block;
+    padding: 12px;
+}
+
+.good-container .list-poi-goods .poi .title-line{
+	line-height: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.good-container .list-poi-goods .poi .title-line .title{
+    display: inline-block;
+    max-width: 100%;
+    font-size: 16px;
+    color: #22222d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.good-container .list-poi-goods .poi .sub-title{
+    line-height: 12px;
+    height: 12px;
+    margin-top: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    color: #88888d;
+}
+
+.good-container .list-poi-goods .poi .sub-title .store{
+   float: right;
+}
+
+.good-container .list-poi-goods .poi .sub-title .score{
+    float: left;
+    margin-right: 16px;
+    color: #ff7e00;    
+}
+
+.good-container .list-poi-goods .poi .sub-title .user{
+    float: left;
+}
+
+/*good的样式  引入goodscomponent.css -- start*/
+
+.good-container .good-content .img-wrapper{
+   width: 84px;
+}
+
+.good-container .list-poi-goods .good-content .img-wrapper img {
+    width: 108px;
+    height: 64px;
+}
+
+/*.poi.goods 引入 goodscomponent.css --start*/
+/*.poi.goods 引入 goodscomponent.css --end*/
+
+
+.good-container .list-poi-goods .poi .good .good-content .info-wrapper .desc{
+    line-height: 18px;
+    height: 36px;
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #55555d;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/*隐藏good—content*/
+.good-container .list-poi-goods .poi .good .good-content.good-hide{
+    display: none;
+}
+
+/*good的样式  引入goodscomponent.css -- end*/
+.good-container .list-poi-goods .poi .poi-footer{
+	line-height: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #55555d;
+}
+
+.good-container .list-poi-goods .poi .poi-footer .view{
+
+}
+
+.good-container .list-poi-goods .poi .poi-footer .put{
+	    display: none;
+}
+
+.good-container .list-poi-goods .poi .poi-footer:after{
+	content: '';
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    left: 8px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+    width: 7px;
+    height: 7px;
+    border-bottom: 1px solid #111;
+    border-left: 1px solid #111;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+ .list-viewmore{
+    padding: 0 10px 10px;
+    height: 31px;
+    margin-top: 10px;
+}
+
+.list-viewmore .list-gotop{
+	float: right;
+    width: 78px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 29px;
+    height: 29px;
+    font-size: 13px;
+    color: #303030;
+    background-color: #fff;
+}
+
+ .viewmore-block{
+	width: 213px;
+    padding: 0;
+}
+
+ .viewmore-block .status{
+ 	height: 29px;
+    line-height: 29px;
+    font-size: 13px;
+    text-align: center;
+	border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 90%;
+    cursor: pointer;
+    color: #303030;
+    margin: auto;
+}
+
+/*引用 footer.css --start*/
+/*引用 footer.css --end*/

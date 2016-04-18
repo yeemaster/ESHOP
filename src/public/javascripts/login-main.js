@@ -41,7 +41,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                       isinputtelok = false;
                   }else{
                       $.ajax({
-                        url: 'http://yequan.ren/eshop/login/verifytel',
+                        url: 'http://localhost:3000/login/verifytel',
                         type: 'POST',
                         dataType: 'json',
                         data: {'telNo' : telno}
@@ -106,7 +106,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
               };
 
               $.ajax({
-                url: 'http://yequan.ren/eshop/login/isgouserhome',
+                url: 'http://localhost:3000/login/isgouserhome',
                 type: 'POST',
                 dataType: 'json',
                 async:false,
