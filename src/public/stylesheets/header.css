@@ -3,7 +3,7 @@ header{
 	width: 100%;
 	height: 44px;
 	line-height: 44px;
-	background-color: #ff4683;
+	background-color: #FF4728;
 	color: #fff;
 	font-size: 16px;
 }
@@ -47,7 +47,7 @@ header .search-operate .search-inner > .search-input{
     width: 100%;
     padding: 0 0 0 25px;
     height: 35px;
-    border: 1px solid #ff4683;
+    border: 1px solid #FF4728;
     background: url(../images/hotel-page/header/search-01.png)  5px center no-repeat;
     background-size: 17px auto;
     color: #303030;
@@ -63,7 +63,7 @@ header .search-operate .search-inner > .fake-home-operate{
     width: 44px;
     height: 100%;
     line-height: 44px;
-    background-color: #ff4683;
+    background-color: #FF4728;
     text-align: center;
 }
 

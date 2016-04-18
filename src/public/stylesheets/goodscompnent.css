@@ -82,7 +82,7 @@
  .good-content .price-line{
 	line-height: 16px;
     height: 16px;
-    color: #ff4683;
+    color: #FF4728;
     overflow: hidden;
 }
 
@@ -110,7 +110,7 @@
 	position: relative;
     top: -2px;
     display: inline-block;
-    border: 1px solid #ff4683;
+    border: 1px solid #FF4728;
     border-radius: 2px;
     line-height: 13px;
     height: 13px;

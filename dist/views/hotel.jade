@@ -37,7 +37,7 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/hotel.css')
   body.list-page
     header.list-header
-      a.back-operate(href='#{_var_net}/hoteldesc')
+      a.back-operate(href='javascript:void(0)',onclick='javascript:history.go(-1);')
         i.arrow-left
       |        
       .search-operate
@@ -45,7 +45,7 @@ html(lang='en')
           .search-inner
             input.search-input(placeholder='搜索商家、分类、地点')
             |        &#x9;    &#x9;    
-            a.fake-home-operate
+            a.fake-home-operate(href='#{_var_net}/')
             // <button></button>
           |        &#x9;       
           .suggestion-wrapper

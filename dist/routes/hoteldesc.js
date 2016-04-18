@@ -29,7 +29,7 @@ db.once('open',function(){
 		            "item-desc" : {type:String},
 		            "item-price-line": {type:Number},
 		            "item-old-price": {type:Number},
-		            "item-bought": {type:Number},
+                    "item-bought": {type:String},
 		            "item-img": {type:String}
 		        }
 		    ]
@@ -42,15 +42,15 @@ db.once('open',function(){
 		  {
 		  	"_id": {type: mongoose.Schema.Types.ObjectId},  //主键
 		    "name":{type:String},
-		    "objid":{type:String,unique:true},
-		    "img":{type:String},
+		    "objid":{type:String},
+		    "preobjid":{type:String},
 		    "desc":{type:String},
 		    "price":{type:Number},
 		    "old-price":{type:Number},
 		    "privilege":{type:String},
 		    "bought":{type:String},
 		    "store":{type:String},
-            "img": {type:String}
+		    "img": {type:String}
 		  }
     );
 

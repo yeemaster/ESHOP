@@ -18,6 +18,9 @@ var proSchema = new mongoose.Schema(
     "desc":   {type:String},
     "type":   {type:Number},
     "remai":  {type:Number},
+    "city":   {type:String},
+  "point-x":  {type:Number},
+  "point-y":  {type:Number},
     "items": 
     [
         {
@@ -26,7 +29,7 @@ var proSchema = new mongoose.Schema(
             "item-desc" : {type:String},
             "item-price-line": {type:Number},
             "item-old-price": {type:Number},
-            "item-bought": {type:Number},
+            "item-bought": {type:String},
             "item-img": {type:String}
         }
     ]
