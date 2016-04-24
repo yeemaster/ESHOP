@@ -19,7 +19,7 @@ gulp.task('yscss', function() {
     return gulp.src('./src/public/stylesheets/**/*.css')
     .pipe(autoprefixer())
     //压缩样式文件
-    // .pipe(minifycss())
+    .pipe(minifycss())
     //输出压缩文件到指定目录
     .pipe(gulp.dest('./dist/public/stylesheets/'));
     //提醒任务完成
@@ -60,17 +60,22 @@ gulp.task('rjs', function () {
                     "jquery": "./src/public/libs/jquery-2.1.4.min",            
                     "indexmain": "./src/public/javascripts/index-main",
                     "registermain": "./src/public/javascripts/register-main",
-                    "loginmain": "./src/public/javascripts/login-main"
+                    "loginmain": "./src/public/javascripts/login-main",
+                    "gotop":"./src/public/javascripts/gotop",
+                    "rqmyglobal":"./src/models/rqmyglobal",
+                    "hotelmain": "./src/public/javascripts/hotel-main",
+                    "hoteldetailmain": "./src/public/javascripts/hoteldetail-main",
+                    "hoteldescmain": "./src/public/javascripts/hoteldesc-main"
                 },
                 shim: {                     //引入没有使用requirejs模块写法的类库。
                     zepto: {
                         exports: "$"
-                    }
+                    }                  
                 }
         }))
         .pipe(concat("main.js"))           //合并
         .pipe(gulp.dest("./dist/public/javascripts/"))          //输出保存
-        // .pipe(uglify())                        //压缩
+        .pipe(uglify())                        //压缩
         .pipe(gulp.dest("./dist/public/javascripts/"));         //输出保存
         // .pipe(notify({ message: 'rjs task complete' }));
 });

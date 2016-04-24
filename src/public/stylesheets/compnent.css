@@ -31,7 +31,7 @@
 	width: 50px;
     height: 39px;
     position: fixed;
-    display: block;
+    display: none;
     /*display: none;*/
     right: 12px;
     bottom: 60px;
@@ -170,7 +170,7 @@
 
 .recom-good .current-price{
     font-size: 18px;
-    color: #ff4689;
+    color: #FF4728;
 }
 
 .recom-good .current-price:before

@@ -1,5 +1,5 @@
 
-define(['verify','ajax','jquery'],function(verify,ajax,$){
+define(['verify','ajax','jquery','rqmyglobal'],function(verify,ajax,$,rmgl){
   return{
     deal_login_main:function(){
 
@@ -41,7 +41,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                       isinputtelok = false;
                   }else{
                       $.ajax({
-                        url: 'http://localhost:3000/login/verifytel',
+                        url: rmgl.net + '/login/verifytel',
                         type: 'POST',
                         dataType: 'json',
                         data: {'telNo' : telno}
@@ -106,7 +106,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
               };
 
               $.ajax({
-                url: 'http://localhost:3000/login/isgouserhome',
+                url: rmgl.net + '/login/isgouserhome',
                 type: 'POST',
                 dataType: 'json',
                 async:false,

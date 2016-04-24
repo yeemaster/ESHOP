@@ -35,7 +35,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/poigoods.css')
     | &#x9;    
     link(rel='stylesheet', type='text/css', href='stylesheets/hotel.css')
-  body.list-page
+    script(data-main='javascripts/main.js',src='libs/require.js',id='main')
+  body.list-page(webtitle='hotel_html')
     header.list-header
       a.back-operate(href='javascript:void(0)',onclick='javascript:history.go(-1);')
         i.arrow-left
@@ -334,4 +335,5 @@ html(lang='en')
         | yequan.ren 闽ICP备16004418号
     |    
     |       
-    a.goTop(href='javascript:void(0);')  
+    a.goTop(href='javascript:void(0);')
+    div.filter-sort-mask

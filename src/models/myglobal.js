@@ -1,6 +1,6 @@
 
 var myglobalvar = {
-	"net": "http://localhost:3000"
+	"net": "http://yequan.ren/eshop"
 }
 
 

@@ -1,4 +1,4 @@
-define(["zepto","Carousel","Timing"], function($,Carousel,Timing){
+define(["zepto","Carousel","Timing","gotop"], function($,Carousel,Timing,gotop){
 
    return {
        deal_index_main: function(){
@@ -6,6 +6,7 @@ define(["zepto","Carousel","Timing"], function($,Carousel,Timing){
              Carousel.doCarouselTouch(document.getElementById("index-catg-myCarousel"));
              Carousel.doCarousel(document.getElementsByClassName("static-container")[0]);
              Timing.getTiming(document.getElementsByClassName("countdown")[0]);
+             gotop.gtop(document.getElementsByClassName("goTop")[0]);
        }
    };
 });

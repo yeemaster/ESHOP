@@ -28,7 +28,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/compnent.css')
     |       
     link(rel='stylesheet', type='text/css', href='stylesheets/carousel.css')
-  body.detail-page
+    script(data-main='javascripts/main.js',src='libs/require.js',id='main')      
+  body.detail-page(webtitle='hoteldetail_html')
     header.detail-header
       a.back-icon(href='javascript:void(0);',onclick='javascript:history.go(-1);')
       |          

@@ -1,4 +1,4 @@
-define(['verify','ajax','jquery'],function(verify,ajax,$){
+define(['verify','ajax','jquery','rqmyglobal'],function(verify,ajax,$,rmgl){
 
   return{
      deal_register_main:function(){
@@ -54,7 +54,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                 isinputtelok = false;
             }else{
                     $.ajax({
-                      url: 'http://localhost:3000/register/verifytel',
+                      url: rmgl.net + '/register/verifytel',
                       type: 'POST',
                       dataType: 'json',
                       data: {'telNo' : telno}
@@ -90,7 +90,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                 isinputusername = false;
             }else{
                 $.ajax({
-                  url: 'http://localhost:3000/register/verifyuser',
+                  url: rmgl.net + '/register/verifyuser',
                   type: 'POST',
                   dataType: 'json',
                   data: {'username' : username}
@@ -167,7 +167,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
           };
 
           $.ajax({
-            url: 'http://localhost:3000/register',
+            url: rmgl.net + '/register',
             type: 'POST',
             dataType: 'json',
             async:false,
@@ -178,7 +178,7 @@ define(['verify','ajax','jquery'],function(verify,ajax,$){
                    error.innerHTML = msg.errmsg;
                    verify.gettiaozhuan(error);
                    setTimeout(function(){
-                        window.location.href = "http://localhost:3000/login";
+                        window.location.href = rmgl.net + '/login';
                    },3000);
                }else{
                    error.innerHTML = '';          
